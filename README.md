@@ -7,11 +7,7 @@ Firstly I'll conduct this project to identify tax documents such as bills, invoi
 
 **Machine Learning**
 
-Aprendizado Baseado em Regras (Rule-Based Learning): Já que você define regras de classificação manuais que vão sendo aprimoradas.
-
-Aprendizado Semi-Supervisionado (caso o sistema use tanto regras manuais quanto exemplos classificados pelos usuários para melhorar a classificação futura).
-
-Aprendizado Baseado em Casos (Case-Based Reasoning - CBR): O sistema armazena decisões passadas e usa elas para classificar novos casos semelhantes.
+This project is building in Rule-Based Learning: Since you define manual classification rules that are refined over time.
 
 
 ### Approach
