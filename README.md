@@ -21,15 +21,16 @@ The idea is find unique patterns in each document.
 Strategies:
 - Look for key-words or specific sentences tha only appear in specific documents.
 - Validating structures like tax id, dates or specific headers.
+- Tracking this key word pattern usign regex or other approach and then save them in a database
 
 
 
 **How it'll work ?**
-- For each type of documents there are specific regex to identify pattern into given text.
+- For each type of documents there are specific regex (or other approach) to identify pattern into given text.
 - If a pattern is found, then return the matching type
 - Otherwise classifies as 'unknown'
 
 
 2️⃣ Extraction of relevant data
 
-- After identify the document, we'll extract key informations using regex.
+- After identify the document, we'll extract key informations using regex (or other approach).
