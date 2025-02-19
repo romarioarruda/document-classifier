@@ -2,8 +2,8 @@ from pprint import pprint
 from core.document_field import DocumentField
 from core.document_identify import DocumentIdentify
 from utils.pdf_text_extractor import extract_text_from_pdf
-from database.local_id_pattern_loader import LocalIdPatternLoader
-from database.local_field_pattern_loader import LocalFieldsPatternLoader
+from patterns.local_id_pattern_loader import LocalIdPatternLoader
+from patterns.local_field_pattern_loader import LocalFieldsPatternLoader
 
 
 document = DocumentIdentify(LocalIdPatternLoader('./patterns/ids.txt'))
