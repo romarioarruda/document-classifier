@@ -5,7 +5,7 @@ The main goal is to build an A.I model to act as a document classifier.
 Firstly I'll conduct this project to identify tax documents such as bills, invoices, etc.
 
 
-**Machine Learning**
+## Machine Learning
 
 This project is building in Rule-Based Learning: Since you define manual classification rules that are refined over time.
 
