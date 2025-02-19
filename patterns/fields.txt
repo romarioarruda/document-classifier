@@ -1,0 +1,20 @@
+#slz
+nfse->p1;documentNumber;N.MERO DA NOTA\s*(\w+)
+nfse->p1;authenticityCode;C.DIGO DE VERIFICA..O\s([^>]+)DATA
+nfse->p1;issueDate;DATA DE EMISS.O\s*(\d{2}/\d{2}/\d{4}(?:\s*\d{2}:\d{2}:\d{2})?)
+nfse->p1;competenceDate;COMPET.NCIA\s*((?:\d{2}/)?\d{2}/\d{4})
+nfse->p1;customer;NOME\s*/\s*RAZ.O SOCIAL\s*(\w+)
+nfse->p1;addressComplement;ENDEREÇO\s*([^\n]+)
+nfse->p1;addressPostalCode;CEP\s*(\d+)
+nfse->p1;addressCity;MUNIC.PIO\s*([^\n]+)
+nfse->p1;addressUf;UF\s*([^\n]+)
+nfse->p1;addressCountry;PA.S\s*([^\n]+)
+nfse->p1;taxId;CPF\s*/\s*CNPJ\s*/\s*OUTROS[^\d]+([^\n]+)
+nfse->p1;serviceCode;C.DIGO\s*DO\s*SERVI.O\s*([^\n]+)
+nfse->p1;grossValue;VALOR\s*DOS\s*SERVI.OS:\s*([^\n]+)
+nfse->p1;netValue;VALOR\s*L.QUIDO:\s*([^\n]+)
+
+
+#bsb
+nfse->p2;documentNumber;N.mero da Nota(?:\sFiscal)?\s*(?:nº\s)?(\d+)
+nfse->p2;authenticityCode;C.d.*?de\sAutenticidade\s(\w+)

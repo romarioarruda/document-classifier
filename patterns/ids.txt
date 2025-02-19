@@ -1,0 +1,6 @@
+#slz
+nfse->p1;(?:nfs\-?e)?(?:\s*-\s*)?NOTA FISCAL DE SERVI.OS ELETR.NICA
+
+
+#bsb
+nfse->p2;Nota Fiscal de Servi.o\s*Eletr.nica(?:\s*-\s*)?(?:nfs\-?e)?
