@@ -1,3 +1,5 @@
+## 🚧 Building...
+
 ## Document Classifier
 
 The main goal is to build a document classifier that could be trained with new scenarios according to needs.
