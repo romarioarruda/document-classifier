@@ -1,3 +1,4 @@
+from utils.sanitization import remove_diacritics
 from utils.pdf_text_extractor import extract_text_from_pdf
 
 
@@ -11,8 +12,8 @@ def word_similarity(text1: str, text2: str) -> float:
     return len(intersection) / len(union)  # jaccard similarity
 
 
-text1 = extract_text_from_pdf('./pdf_2.pdf')
-text2 = extract_text_from_pdf('./pdf_similar_2.pdf')
+text1 = remove_diacritics(extract_text_from_pdf('./pdf_2.pdf')).lower()
+text2 = remove_diacritics(extract_text_from_pdf('./pdf_1.pdf')).lower()
 
 similarity = word_similarity(text1, text2)
 print(f"Similarity: {similarity:.2f}")
