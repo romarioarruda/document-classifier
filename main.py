@@ -3,12 +3,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from pprint import pprint
-from infra.database.mongodb import MongoDB
-from common.pdf_text_extractor import extract_text_from_pdf
-from domain.use_cases.document_field import DocumentField
-from domain.use_cases.document_identify import DocumentIdentify
-from domain.use_cases.local_id_pattern_loader import LocalIdPatternLoader
-from domain.use_cases.local_field_pattern_loader import LocalFieldsPatternLoader
+from app.common.pdf_text_extractor import extract_text_from_pdf
+from app.use_cases.document_field import DocumentField
+from app.use_cases.document_identify import DocumentIdentify
+from app.use_cases.local_id_pattern_loader import LocalIdPatternLoader
+from app.use_cases.local_field_pattern_loader import LocalFieldsPatternLoader
 
 
 document = DocumentIdentify(LocalIdPatternLoader('./infra/local_patterns/ids.txt'))

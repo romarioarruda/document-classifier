@@ -1,6 +1,6 @@
 from collections import Counter
-from common.sanitization import remove_diacritics
-from common.pdf_text_extractor import extract_text_from_pdf
+from app.common.sanitization import remove_diacritics
+from app.common.pdf_text_extractor import extract_text_from_pdf
 
 def frequency_similarity(text1: str, text2: str) -> float:
     freq1 = Counter(text1)
