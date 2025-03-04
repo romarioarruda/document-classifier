@@ -1,1 +1,3 @@
+motor
 pdfminer.six
+python-dotenv
