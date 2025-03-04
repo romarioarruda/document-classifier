@@ -1,6 +1,6 @@
 from typing import Pattern, TypedDict
 
-class FieldPattern(TypedDict):
+class FieldPatternDTO(TypedDict):
     fieldName: str
     pattern: Pattern
 

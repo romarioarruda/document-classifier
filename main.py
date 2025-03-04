@@ -1,12 +1,17 @@
+from dotenv import load_dotenv
+
+load_dotenv()
+
 from pprint import pprint
-from core.document_field import DocumentField
-from core.document_identify import DocumentIdentify
-from utils.pdf_text_extractor import extract_text_from_pdf
-from patterns.local_id_pattern_loader import LocalIdPatternLoader
-from patterns.local_field_pattern_loader import LocalFieldsPatternLoader
+from infra.database.mongodb import MongoDB
+from common.pdf_text_extractor import extract_text_from_pdf
+from domain.use_cases.document_field import DocumentField
+from domain.use_cases.document_identify import DocumentIdentify
+from domain.use_cases.local_id_pattern_loader import LocalIdPatternLoader
+from domain.use_cases.local_field_pattern_loader import LocalFieldsPatternLoader
 
 
-document = DocumentIdentify(LocalIdPatternLoader('./patterns/ids.txt'))
+document = DocumentIdentify(LocalIdPatternLoader('./infra/local_patterns/ids.txt'))
 
 text = extract_text_from_pdf('./pdf_2.pdf')
 
@@ -14,7 +19,7 @@ text = extract_text_from_pdf('./pdf_2.pdf')
 doc_type = document.get_classification(text)
 print(f"Tipo do documento: {doc_type}")
 
-doc_fields = DocumentField(LocalFieldsPatternLoader('./patterns/fields.txt'))
+doc_fields = DocumentField(LocalFieldsPatternLoader('./infra/local_patterns/fields.txt'))
 
 json_data = doc_fields.get_fields(doc_type, text)
 pprint(json_data, width=160)

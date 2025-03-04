@@ -1,6 +1,6 @@
 import re
 from typing import Dict, List
-from models.field_pattern import FieldPattern
+from domain.dtos.field_pattern import FieldPatternDTO
 
 
 class LocalFieldsPatternLoader:
@@ -8,7 +8,7 @@ class LocalFieldsPatternLoader:
 
     def __new__(self, patterns_path: str):
         if self._instance is None:
-            self.patterns_dictionary: Dict[str, List[FieldPattern]] = {}
+            self.patterns_dictionary: Dict[str, List[FieldPatternDTO]] = {}
             self.patterns_path = patterns_path
             self._load_patterns(self)
             self._instance = super().__new__(self)

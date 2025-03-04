@@ -1,4 +1,4 @@
-from protocols.database_protocol import DatabaseProtocol
+from domain.protocols.database_protocol import DatabaseProtocol
 
 class DocumentIdentify:
 
