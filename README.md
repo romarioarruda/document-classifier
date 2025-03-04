@@ -55,3 +55,18 @@ Then the final result will be something like this:
     "issueDate": "2025-02-15"
 }
 ```
+
+
+## MongoDB
+
+Spawn mongodb
+
+```
+$ docker compose up -d
+```
+
+To connecting in MongoDB shell you can use MongoDB Compass or run the following docker command:
+
+```
+$ docker exec -it mongodb mongosh -u admin -p admin
+```
