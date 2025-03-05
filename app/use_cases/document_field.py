@@ -17,7 +17,10 @@ class DocumentField:
             search = item["pattern"].search(text)
             result = search.groups() if not search is None else []
 
-            dict_output[item["fieldName"]] = str(result[0]).replace('\n', '') if len(result) > 0 else None
-        
+            if dict_output.get(item["fieldName"]):
+                continue
+
+            dict_output[item["fieldName"]] = str(result[0]).replace('\n', '').strip() if len(result) > 0 else None
+
         return dict_output
         
