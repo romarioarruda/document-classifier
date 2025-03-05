@@ -1,3 +1,4 @@
 motor
+pydantic
 pdfminer.six
 python-dotenv
