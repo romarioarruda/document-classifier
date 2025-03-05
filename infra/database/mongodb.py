@@ -32,4 +32,5 @@ class MongoDB:
 
 
     def get_connection(self):
+        """Retrieve database connection or None if not connected"""
         return self._connection
