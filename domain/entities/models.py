@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 from domain.dtos.field_pattern import FieldPatternDTO
 
 
-class ModelEntity(BaseModel):
+class ModelsEntity(BaseModel):
     id: str = Field(alias='_id')
     classification: str = Field(..., min_length=3, max_length=30)
     classification_raw: str = Field(..., min_length=3, max_length=30, alias='classificationRaw')
